@@ -24,4 +24,10 @@
     </Protobuf>
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="Dream_x280.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
