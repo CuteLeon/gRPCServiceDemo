@@ -81,8 +81,6 @@ package my.project;
 option csharp_namespace = "My.WebAPIs";
 ```
 
-
-
 ### 枚举
 
 ​	可以定义在Message里面，也可以单独定义以复用。
@@ -92,3 +90,16 @@ option csharp_namespace = "My.WebAPIs";
 ​	枚举值可以起别名，允许两个枚举值使用同一个值。但需要在Enum里写上 `option allow_alias = true;`,
 
 ### rpc
+
+## 消息演进
+
+### 消息演进规则
+
+​	不要修改现有字段的 Tag；
+
+​	新增新的字段，旧的服务会忽略新的字段；
+
+​	需要删除字段时，被删除的 Tag 应该被回收，永不再用。可以在字段名称加前缀“OBSOLETE”或者使用reserved回收字段；
+
+​	也不应修改字段的类型；
+
