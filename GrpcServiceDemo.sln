@@ -10,6 +10,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documents", "Documents", "{
 		README.md = README.md
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrpcClient", "GrpcClient\GrpcClient.csproj", "{6A298A1E-3A9E-4716-972F-8C7E215B9154}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,6 +22,10 @@ Global
 		{BB43200B-A8D8-4FD6-82EE-AD986C9A0482}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BB43200B-A8D8-4FD6-82EE-AD986C9A0482}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BB43200B-A8D8-4FD6-82EE-AD986C9A0482}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A298A1E-3A9E-4716-972F-8C7E215B9154}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A298A1E-3A9E-4716-972F-8C7E215B9154}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A298A1E-3A9E-4716-972F-8C7E215B9154}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A298A1E-3A9E-4716-972F-8C7E215B9154}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
