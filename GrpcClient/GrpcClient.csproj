@@ -14,4 +14,14 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Protos\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Protobuf Include="..\GrpcServiceDemo\Protos\Message.proto" GrpcServices="Client">
+      <Link>Protos\Message.proto</Link>
+    </Protobuf>
+  </ItemGroup>
+
 </Project>
