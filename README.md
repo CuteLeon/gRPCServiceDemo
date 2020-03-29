@@ -89,7 +89,21 @@ option csharp_namespace = "My.WebAPIs";
 
 ​	枚举值可以起别名，允许两个枚举值使用同一个值。但需要在Enum里写上 `option allow_alias = true;`,
 
+### service
+
+​	声明服务。
+
+```
+service Employee{
+	rpc GetByName (Request) returns (Response)
+}
+```
+
+
+
 ### rpc
+
+​	在服务内声明接口方法。
 
 ## 消息演进
 
@@ -97,9 +111,66 @@ option csharp_namespace = "My.WebAPIs";
 
 ​	不要修改现有字段的 Tag；
 
-​	新增新的字段，旧的服务会忽略新的字段；
+​	新增新的字段，旧的服务会忽略新的字段，因此应该为新字段设置默认值，这个默认值应该是在当前业务没有意义的数据，以免发生混淆；
 
 ​	需要删除字段时，被删除的 Tag 应该被回收，永不再用。可以在字段名称加前缀“OBSOLETE”或者使用reserved回收字段；
 
 ​	也不应修改字段的类型；
+
+# gRPC原理
+
+## 结构
+
+​	客户端 <=> 生成的代码 <=> 传输协议(Protocol Buffers) <=> 生成的代码 <=> 服务端
+
+## 步骤
+
+​	定义消息 => 生成代码 => 开发客户端和服务端
+
+## 生命周期
+
+​	创建隧道 => 创建Client => Client发送请求 => Server发送 => 发送或接收消息
+
+## 客户端和服务端身份认证（非用户）
+
+​	四种身份认证机制：
+
+1. ​	不安全的连接
+2. ​	TLS/SSL
+3. ​	基于 Google Token 的身份认证
+4. ​	自定义的身份认证提供商
+
+## 消息传输类型
+
+### 一元消息
+
+​	简单的请求-响应，一呼一应。
+
+```protobuf
+rpc 方法名(请求message类型) returns(响应message类型)
+```
+
+### server streaming
+
+​	服务端会使用流分块传输结果。例如在线观看视频。
+
+```
+rpc 方法名(请求message类型) returns(stream 响应message类型)
+```
+
+### client streaming
+
+​	客户端分块发送数据，服务端会一直等待，知道所有数据发送完毕。例如上传文件。
+
+```
+rpc 方法名(stream 请求message类型) returns(响应message类型)
+```
+
+### 双向 streaming
+
+​	综合以上两种。
+
+```
+rpc 方法名(stream 请求message类型) returns(stream 响应message类型)
+```
 
