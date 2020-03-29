@@ -29,6 +29,7 @@ namespace GrpcServiceDemo
             }
 
             app.UseRouting();
+            app.UseHttpsRedirection();
 
             app.UseEndpoints(endpoints =>
             {
