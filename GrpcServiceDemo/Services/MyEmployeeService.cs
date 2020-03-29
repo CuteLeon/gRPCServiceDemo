@@ -20,6 +20,12 @@ namespace GrpcServiceDemo.Services
 
         public override Task<EmployeeResponse> GetByNo(GetByNoRequest request, ServerCallContext context)
         {
+            var metaData = context.RequestHeaders;
+            foreach (var pair in metaData)
+            {
+                this.logger.LogInformation($"{pair.Key} : {pair.Value}");
+            }
+
             var employee = InMemoryData.Employees.SingleOrDefault(employee => employee.No == request.No);
             if (employee != null)
             {
