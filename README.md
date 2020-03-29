@@ -62,9 +62,28 @@ enum Gender{
 
 ​	为了消息版本的兼容，被删除的字段应该回收Tag，并标记为 reserved。
 
+### import
+
+```
+import "xxx.proto";
+```
+
 ​	消息类型可以嵌套引用也可以嵌套定义。但是嵌套引用外部文件的消息类型时，需要使用 import "xxx.proto" 导入外部文件。
 
-#### 枚举
+### package
+
+​	设置命名空间；
+
+```
+// 在C#中将默认生成 "My.Project"
+package my.project;
+// 也可以直接指定特定语言的命名空间
+option csharp_namespace = "My.WebAPIs";
+```
+
+
+
+### 枚举
 
 ​	可以定义在Message里面，也可以单独定义以复用。
 
