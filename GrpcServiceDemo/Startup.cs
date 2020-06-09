@@ -17,7 +17,7 @@ namespace gRPCServiceDemo
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddgRPC();
+            services.AddGrpc();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -33,7 +33,7 @@ namespace gRPCServiceDemo
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapgRPCService<MyEmployeeService>();
+                endpoints.MapGrpcService<MyEmployeeService>();
 
                 endpoints.MapGet("/", async context =>
                 {

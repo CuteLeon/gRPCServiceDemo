@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
-using gRPC.Core;
+using Grpc.Core;
 using gRPCServiceDemo.Data;
 using gRPCServiceDemo.Protos;
 using Microsoft.Extensions.Logging;
