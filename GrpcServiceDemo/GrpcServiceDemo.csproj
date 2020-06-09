@@ -9,11 +9,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Grpc.AspNetCore" Version="2.27.0" />
+    <PackageReference Include="gRPC.AspNetCore" Version="2.27.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <Protobuf Include="Protos\Message.proto" GrpcServices="Server" />
+    <Protobuf Include="Protos\Message.proto" gRPCServices="Server" />
   </ItemGroup>
 
 </Project>

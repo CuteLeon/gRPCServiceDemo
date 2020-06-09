@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
-using Grpc.Core;
-using GrpcServiceDemo.Data;
-using GrpcServiceDemo.Protos;
+using gRPC.Core;
+using gRPCServiceDemo.Data;
+using gRPCServiceDemo.Protos;
 using Microsoft.Extensions.Logging;
 
-namespace GrpcServiceDemo.Services
+namespace gRPCServiceDemo.Services
 {
     public class MyEmployeeService : EmployeeService.EmployeeServiceBase
     {

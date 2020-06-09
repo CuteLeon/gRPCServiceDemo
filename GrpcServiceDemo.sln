@@ -3,14 +3,14 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29920.165
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrpcServiceDemo", "GrpcServiceDemo\GrpcServiceDemo.csproj", "{BB43200B-A8D8-4FD6-82EE-AD986C9A0482}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gRPCServiceDemo", "gRPCServiceDemo\gRPCServiceDemo.csproj", "{BB43200B-A8D8-4FD6-82EE-AD986C9A0482}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documents", "Documents", "{0A0895B2-A866-4559-90A5-31A80292EFB1}"
 	ProjectSection(SolutionItems) = preProject
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrpcClient", "GrpcClient\GrpcClient.csproj", "{6A298A1E-3A9E-4716-972F-8C7E215B9154}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gRPCClient", "gRPCClient\gRPCClient.csproj", "{6A298A1E-3A9E-4716-972F-8C7E215B9154}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

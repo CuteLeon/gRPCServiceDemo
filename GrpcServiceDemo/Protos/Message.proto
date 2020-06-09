@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-option csharp_namespace = "GrpcServiceDemo.Protos";
+option csharp_namespace = "gRPCServiceDemo.Protos";
 
 message Employee{
 	int32 id = 1;

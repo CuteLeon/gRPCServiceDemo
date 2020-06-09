@@ -2,11 +2,11 @@
 using System.IO;
 using System.Threading.Tasks;
 using Google.Protobuf;
-using Grpc.Core;
-using Grpc.Net.Client;
-using GrpcServiceDemo.Protos;
+using gRPC.Core;
+using gRPC.Net.Client;
+using gRPCServiceDemo.Protos;
 
-namespace GrpcClient
+namespace gRPCClient
 {
     class Program
     {
@@ -17,7 +17,7 @@ namespace GrpcClient
                 { "username", "Leon" },
                 { "role", "administrator" },
             };
-            using var channel = GrpcChannel.ForAddress("https://localhost:5001");
+            using var channel = gRPCChannel.ForAddress("https://localhost:5001");
             var client = new EmployeeService.EmployeeServiceClient(channel);
 
             var response = await client.GetByNoAsync(new GetByNoRequest() { No = 102 }, metaDatas);

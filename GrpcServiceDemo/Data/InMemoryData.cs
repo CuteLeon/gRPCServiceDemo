@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using GrpcServiceDemo.Protos;
+using gRPCServiceDemo.Protos;
 
-namespace GrpcServiceDemo.Data
+namespace gRPCServiceDemo.Data
 {
     public class InMemoryData
     {

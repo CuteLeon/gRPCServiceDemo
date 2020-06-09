@@ -7,8 +7,8 @@
 
   <ItemGroup>
     <PackageReference Include="Google.Protobuf" Version="3.11.4" />
-    <PackageReference Include="Grpc.Net.Client" Version="2.27.0" />
-    <PackageReference Include="Grpc.Tools" Version="2.27.0">
+    <PackageReference Include="gRPC.Net.Client" Version="2.27.0" />
+    <PackageReference Include="gRPC.Tools" Version="2.27.0">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
@@ -19,7 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Protobuf Include="..\GrpcServiceDemo\Protos\Message.proto" GrpcServices="Client">
+    <Protobuf Include="..\gRPCServiceDemo\Protos\Message.proto" gRPCServices="Client">
       <Link>Protos\Message.proto</Link>
     </Protobuf>
   </ItemGroup>
